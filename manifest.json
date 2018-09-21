@@ -1,0 +1,23 @@
+{
+  "name": "ScoreCalup",
+  "manifest_version":2,
+  "version": "4.0.1",
+  "description": "Calculate score",
+  "page_action": {
+    "default_icon": "icon.png" ,
+    "default_title": "Jubar",
+    "default_popup": "popup.html"
+  },
+  "background": { "scripts": ["js/background.js"] },
+  "permissions": [
+  "browsingData",
+  "activeTab",
+  "tabs",
+  "contextMenus"],
+  "content_scripts": [
+    {
+      "matches": ["http://jxgl.hdu.edu.cn/*"],
+      "js": ["js/jquery.min.js", "js/main.js"]
+    }
+  ]
+}
